@@ -13,7 +13,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{C89500B2-1AE1-45BE-988A-2F9C645438CB}
+AppId={{F460CFB5-5BF4-4A4C-80B4-A6FEBC7BABC5}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -34,8 +34,8 @@ ChangesAssociations=yes
 DisableProgramGroupPage=yes
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
-OutputDir=C:\Users\Arturo\Passwords_search\Inno
-OutputBaseFilename=Passwords_setup
+OutputDir=C:\Workarea\Python\Passwords_2\Passwords_final525\Inno
+OutputBaseFilename=Password_setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -47,8 +47,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\Arturo\Passwords_search\Inno\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Arturo\Passwords_search\Inno\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Workarea\Python\Passwords_2\Passwords_final525\Inno\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Workarea\Python\Passwords_2\Passwords_final525\Inno\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
