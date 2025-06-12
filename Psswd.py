@@ -7,6 +7,7 @@ import cryptography
 from cryptography.fernet import Fernet
 import os
 import re
+from tkinter import messagebox
 
 # Function needed to fill the listbox. The list can be sorted data or the current searched sites 
 def updateListbox(items_list_listbox):
@@ -26,8 +27,6 @@ def resource_path(relative_path):
 # NOTE: Use these paths When running with the Psswd.py #
 ########################################################
 fpath_data = resource_path('passwords.enc')
-print(fpath_data)
-print('start')
 fpath_key = resource_path('key.key')
 fpath_info = resource_path('information.json')
 
@@ -373,6 +372,11 @@ def change_state_disabled(event):
     entry_6.delete(0, END)
     entry_6.insert(0, "Enter site characters to search ")
 
+# Confirm the delete action. If affirmative the deletion takes with the same delete function as before.
+def delete_check():
+    response = messagebox.askyesno("Confirm action", "Are you sure you want to DELETE the site")
+    if response:
+        delete()
 
 # Bind the listox virtual event when user selects a site to list_clicked.
 listbox.bind('<<ListboxSelect>>', list_clicked)
@@ -397,7 +401,7 @@ button_save.grid(row=15, column=1, sticky=W)
 button_new = tk.Button(frame, text=" NEW ", command=new, state='active')
 button_new.grid(row=15, column=1)
 
-button_delete = tk.Button(frame, text="DELETE", command=delete, state='active')
+button_delete = tk.Button(frame, text="DELETE", command=delete_check, state='active')
 button_delete.grid(row=15, column=1, sticky=E)
 
 # Display general label about the browsing fields

@@ -1,6 +1,8 @@
 ADDENDUM II (May 2025)
 
-Added the capability to open a web browser with the selected web site defined in entry_3. This functionality is  enabled by using the web button
+Added the capability to open a web browser with the selected web site defined in the website field entry_3 under the SITE INFORMATION. This functionality is  enabled by using the web button
+
+Added delete question for users to verify the delete action.
 
 Verified all websites and eleiminated a few sites not required anymore.
 
